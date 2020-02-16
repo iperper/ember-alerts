@@ -1,3 +1,8 @@
+'''
+Remove duplicates from the dataset based on id (so only works if each point has
+unique ID number)
+'''
+
 import os
 import csv
 import argparse

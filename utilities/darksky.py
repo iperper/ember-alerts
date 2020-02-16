@@ -4,6 +4,11 @@
 Created on Sat Feb 15 09:26:25 2020
 
 @author: michaelkarachewski
+
+Takes rows of (lon,lat,date) inputs from a CSV and calls DarkSky Weather API
+several times for each entry to output 13 weather features and other fields to a CSV.
+
+Can take additional inputs for speeding up or breaking apart lookup tasks
 """
 
 import requests
@@ -168,10 +173,10 @@ def create_input_vector(start_date, lat, long, label, idnum, write_file_list):
 
 
 if __name__ == "__main__":
-    parser =argparse.ArgumentParser(description="Create training data")
+    parser =argparse.ArgumentParser(description="Create training data. See --help for usage info")
     parser.add_argument("--S", type=int, default=0, help="ID of data to start collection on")
     parser.add_argument("--E", type=int, default=10, help="ID of data to end collection on")
-    parser.add_argument("--skip_file", type=str, help="Name of csv file with id's already used")
+    parser.add_argument("--skip_file", type=str, help="Name of csv file with id's already used, as to no repeat.")
 
     args = parser.parse_args()
 
