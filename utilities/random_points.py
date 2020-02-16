@@ -1,4 +1,6 @@
 '''
+@author Isaac Perper
+
 Creates random date and coordinate pairs in the date window and coordinate box.
 Currently the box contains a line (to make it a pentagon), as to avoid water
 off of the california coast).

@@ -1,4 +1,6 @@
 '''
+@author Isaac Perper
+
 Creates csv file with ids of points already called on API, such that darksky
 doesn't use API calls unnecessarily
 '''
